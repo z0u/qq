@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+}
+
+#header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  background: #555;
+  border-radius: 50%;
+  color: #820d0d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#header img {
+    height: 60px;
+    margin-top: 1px;
+}
+
+#main-vis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  background-color: #555;
+}
+#main-vis > svg {
+  width: 100%;
+  height: 100%;
+}
+text {
+  fill: white;
+  font-family: 'Open Sans', sans-serif;
+}
+g.timeline text {
+  font-family: 'Nova Mono', monospace;
+}
+g.service-area > rect {
+  fill: #888888;
+  stroke-width: 4;
+}
+g.service-area > text {
+  fill: #cecece;
+}
+g.server > circle {
+  stroke-width: 4;
+  fill: #cecece;
+}
+g.cluster.closed g.service-area > rect {
+  fill: #444;
+}
+g.cluster.closed g.server > circle {
+  fill: #ff5959;
+}
+g.queue > line {
+  stroke: #ff972f;
+  stroke-width: 4;
+}
+g.client > rect {
+  fill: white;
+}
+g.client > rect.progress {
+  fill: #ff972f;
+}
+g.client > text {
+  fill: black;
+  font-size: 10px;
+}
+g.client.vacant > rect {
+  stroke: #aaa;
+  fill: none;
+  stroke-width: 1;
+}
+g.mobile-server > rect {
+  stroke-width: 2px;
+  stroke: #ffffff;
+  fill: none;
+}
+g.mobile-server.idle {
+  display: none;
+}
+
+#side-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #444;
+}
+svg.chart {
+  width: 100%;
+  height: 15%;
+}
+svg.chart g.axis path,
+svg.chart g.axis line {
+  stroke: #888888;
+}
+svg.chart g.lines path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+}
+.chart-label {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+p.controls {
+  text-align: center;
+}
+.btn {
+  padding: 6px 8px;
+  background: #333;
+  border: 2px solid #666;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 0 2px;
+}
