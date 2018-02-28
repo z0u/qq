@@ -6,6 +6,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body',
 });
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -44,5 +45,9 @@ module.exports = {
     colors: true,
   },
   devtool: 'source-map',
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [
+    HtmlWebpackPluginConfig,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false },
+    })],
 };
